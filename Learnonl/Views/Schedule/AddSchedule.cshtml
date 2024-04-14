@@ -1,0 +1,16 @@
+﻿@model Learnonl.ViewModels.AddScheduleViewModel
+
+<form asp-action="AddSchedule" method="post">
+    <label for="LessonId">Lesson ID:</label>
+    <input type="number" id="LessonId" name="LessonId" required>
+
+    <label for="NgayHoc">Ngày Học:</label>
+    <input type="date" id="NgayHoc" name="NgayHoc" required>
+
+    <label for="Slot">Slot:</label>
+    <input type="number" id="Slot" name="Slot" required>
+
+    <!-- Thêm các trường thông tin khác nếu cần -->
+
+    <button type="submit">Thêm Thời Khóa Biểu</button>
+</form>

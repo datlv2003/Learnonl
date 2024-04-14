@@ -1,0 +1,177 @@
+﻿ @model Learnonl.Models.Login
+@*@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modernize Free</title>
+    <link rel="shortcut icon" type="image/png" href="~/assets/images/logos/favicon.png" />
+    <link rel="stylesheet" href="~/assets/css/styles.min.css" />
+</head>
+
+<body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+         data-sidebar-position="fixed" data-header-position="fixed">
+        <div class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+            <div class="d-flex align-items-center justify-content-center w-100">
+                <div class="row justify-content-center w-100">
+                    <div class="col-md-8 col-lg-6 col-xxl-3">
+                        <div class="card mb-0">
+                            <div class="card-body">
+                                <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
+                                    <img src="~/assets/images/logos/dark-logo.svg" width="180" alt="">
+                                </a>
+                                <p class="text-center">Your Social Campaigns</p>
+                                <form id="login-form" action="/">
+                                    <div class="mb-3">
+                                        <label class="form-label username-content" for="username">User</label>
+                                        <input class="form-control username" type="text" name="username" id="username" placeholder="Enter your email or username" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label username-password" for="password">Password:</label>
+                                        <input class="form-control password" type="password" id="password" placeholder="Enter your password" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <button class="btn-login" type="submit">Login</button>
+                                    </div>
+                                </form>
+                                <form asp-action="~/Authen/Login" method="post" class="signin-form">
+                                    @Html.AntiForgeryToken()
+                                    <div asp-validation-summary="All" class="text-danger"></div>
+                                    <div class="mb-3">
+                                        <label asp-for="@Model.Username" class="form-label">Username</label>
+                                        <input asp-for="@Model.Username" type="Username" class="form-control" id="exampleInputUsername" aria-describedby="UsernameHelp">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label asp-for="@Model.Password" class="form-label">Password</label>
+                                        <input asp-for="@Model.Password" type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked>
+                                            <label class="form-check-label text-dark" for="flexCheckChecked">
+                                                Remeber this Device
+                                            </label>
+                                        </div>
+                                        <a class="text-primary fw-bold" href="./index.html">Forgot Password ?</a>
+                                    </div>
+                                    <button asp-action="Login" type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Log In</button>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <p class="fs-4 mb-0 fw-bold">New to Modernize?</p>
+                                        <a class="text-primary fw-bold ms-2" href="./authentication-register.html">Create an account</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @TempData["ErrorMessage"]
+            </div>
+        }
+    </div>
+    <script src="~/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="~/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html> *@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Group 4</title>
+    <link rel="stylesheet" href="~/css/Login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div style="display: flex;height:100vh" class="col-md-6 Login">
+                <div class="login-form">
+                    <h1 class="header-area" style="font-weight: 650; margin-bottom:20px">Log in to your account</h1>
+                    <p class="lead" style="margin:15px;color: rgba(127, 127, 127, 0.807);">Welcome! Select method to login:</p>
+                    <form asp-action="~/Authen/Login" method="post" class="needs-validation">
+                        @Html.AntiForgeryToken()
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="mb-3">
+                            <label asp-for="@Model.Username" class="form-label">Username</label>
+                            <input asp-for="@Model.Username" type="Username" class="form-control" id="exampleInputUsername" aria-describedby="UsernameHelp">
+                        </div>
+                        <div class="mb-4">
+                            <label asp-for="@Model.Password" class="form-label">Password</label>
+                            <input asp-for="@Model.Password" type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label text-dark" for="flexCheckChecked">
+                                    Remeber this Device
+                                </label>
+                            </div>
+                            <a class="text-primary fw-bold" href="./index.html">Forgot Password ?</a>
+                        </div>
+                        <div class="row mb-3">
+                        <button asp-action="Login" type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Log In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 Login">
+                <div style="height: 100vh;display:flex;align-items:center;justify-content:center; background-color: var(--cam);">
+                    <div style="text-align:center;" class="background-left ">
+                        <h2 style="padding-bottom:40px" class="background-content">Academic Portal </h2>
+                        <div class="circle">
+                            <img style="max-height: 50%;max-width: 50%;    transform: translate(-50%,-50%);" class="logoimg img-thumbnai" src="~/images/icons/logo-removebg-preview.png" alt="ảnh logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   @*  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+ *@
+    <script>
+        var resultElements = document.querySelectorAll('.result');
+
+        function fadeOutAndRemove(element) {
+            element.classList.add('fade-out');
+            setTimeout(function () {
+                element.remove();
+            }, 2000);
+        }
+        resultElements.forEach(function (element) {
+            setTimeout(function () {
+                fadeOutAndRemove(element);
+            }, 2000);
+        });
+    </script>
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+    </div>
+    <script src="~/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="~/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

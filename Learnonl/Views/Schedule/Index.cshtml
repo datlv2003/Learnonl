@@ -1,0 +1,87 @@
+﻿@model Learnonl.ViewModels.ScheduleViewModel;
+
+@{
+    Layout = null; 
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custommer</title>
+    <link rel="shortcut icon" type="imagem/png" href="~/images/logo.png" />
+    <link rel="stylesheet" href="~/assets/css/styles.min.css" />
+</head>
+
+<body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+         data-sidebar-position="fixed" data-header-position="fixed">
+        <!-- Sidebar Start -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div>
+                <div>
+                    @Html.Partial("_Logoadmin")
+                </div>
+                <!-- Sidebar navigation-->
+                @Html.Partial("_Navadmin")
+
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!--  Sidebar End -->
+        <!--  Main wrapper -->
+        <div class="body-wrapper">
+            <!--  Header Start -->
+            @Html.Partial("_Headeradmin")
+            <!--  Header End -->
+            <div class="container-fluid">
+                @{
+                    var daysOfWeek = new[] { "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy", "Chủ Nhật" };
+                    var slots = new[] { "Slot 1: 7h-9h", "Slot 2: 9h10-11h10", "Slot 3: 11h20-13h20", "Slot 4: 13h30-15h30", "Slot 5: 15h40-17h40", "Slot 6: 17h50-19h50" };
+                    var currentDate = DateTime.Now;
+                }
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Thứ</th>
+                            <th>Ngày</th>
+                            <th>Slot</th>
+                            <th>Thông Tin</th>
+                            <!-- Các thêm các cột khác nếu cần -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var schedule in Model.Schedules) // Sử dụng tên thuộc tính chính xác từ model
+                        {
+                            <tr>
+                                <td>@(schedule.NgayHoc.HasValue ? new DateTime(schedule.NgayHoc.Value.Year, schedule.NgayHoc.Value.Month, schedule.NgayHoc.Value.Day).DayOfWeek.ToString() : "Không xác định")</td>
+                                <td>@(schedule.NgayHoc.HasValue ? schedule.NgayHoc.Value.ToString("dd/MM/yyyy") : "Không xác định")</td>
+                                <td>@schedule.Slot</td>
+                                <td>@(schedule.Lesson != null ? schedule.Lesson.Title : "Không xác định")</td>
+                                <!-- Các thêm thông tin khác từ schedule -->
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <script src="~/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="~/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/sidebarmenu.js"></script>
+    <script src="~/assets/js/app.min.js"></script>
+    <script src="~/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="~/assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="~/assets/js/dashboard.js"></script>
+</body>
+
+</html>
+

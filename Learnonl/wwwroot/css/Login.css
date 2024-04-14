@@ -1,0 +1,95 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 2s ease-out; /* Thiết lập thời gian và kiểu chuyển động */
+}
+
+
+:root {
+    --cam: #F07025;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+// phần hiển thị form đăng ký
+.login-form {
+    padding: 20px;
+    border-radius: 5px;
+    float: right;
+}
+
+.Login {
+    align-items: center;
+    justify-content: center;
+}
+
+.username,
+.password {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.btn-login {
+    width: 100%;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    background-color: var(--cam);
+}
+
+    .btn-login:hover {
+        color: black;
+        opacity: 0.95;
+    }
+/* Phần hiển thị background màu cam */
+
+.background-left {
+    align-items: center;
+    flex: 1;
+    justify-content: center
+}
+
+.background-content {
+    margin-top: 30px;
+    align-self: center;
+    justify-self: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    height: auto
+}
+
+.circle {
+    background-color: #fff;
+    width: 34vw;
+    height: 34vw;
+    margin: auto;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.logoimg {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}

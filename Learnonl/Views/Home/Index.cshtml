@@ -1,0 +1,773 @@
+﻿@model IEnumerable<Learnonl.Models.Categories>
+@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTEC - Learn Programming to Get a Job</title>
+    <link rel="stylesheet" href="~/static/main.css">
+    <link rel="stylesheet" href="~/static/responsive.css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="icon" href="~/images/logo.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<!-- <body> -->
+<body style="overflow-y: auto; overflow-x: unset;background-color:#f07025">
+    @Html.Partial("_Header")
+    <div class="content-card">
+        @Html.Partial("_Navhome")
+        <!-- Phần slideshow -->
+        <aside class="content-aside">
+            <div class="content-card_aside" style="max-width: 1920px;">
+                <div class="home_aside">
+                    <div class="aside_wrapper">
+                        <div class="slick-slider slick-initialized" dir="ltr">
+                            <div class="slideshow_arrow slideshow_prev">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="chevron-left" class="svg-inline--fa fa-chevron-left " role="img" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z">
+                                    </path>
+                                </svg>
+                            </div>
+
+                            <div class="slick-list">
+                                <div data-index="1" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none;">
+                                    <div>
+                                        <div tabindex="-1" style="width: 100%; display: inline-block;">
+                                            <div class="slideshow_item" style="--cta-hover-color: #8828fa; background: linear-gradient(to right, rgb(136, 40, 250), rgb(89, 169, 250));">
+                                                <div class="slideshow_left">
+                                                    <h2 class="slideshow_heading">
+                                                        <a rel="noreferrer noopener noreferrer" target="_blank" href="https://forms.gle/QRHdZ6DG1sg1k4ZN6">
+                                                            Lớp Offline tại Đà Nẵng
+                                                            <span class="slideshow_crownIcon">
+                                                                <img src="./images/media/crown.svg" alt="">
+                                                            </span>
+                                                        </a>
+                                                    </h2>
+                                                    <p class="slideshow_desc">
+                                                        Hình thức học Offline phù hợp nếu bạn muốn được hướng dẫn và hỗ trợ
+                                                        trực tiếp tại lớp. Giờ học linh hoạt, phù hợp cả sinh viên và người đi làm.
+                                                    </p>
+                                                    <div>
+                                                        <a rel="noreferrer noopener noreferrer" class="slideshow_ctaBtn" target="_blank" href="https://forms.gle/QRHdZ6DG1sg1k4ZN6">
+                                                            TƯ VẤN MIỄN PHÍ
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="slideshow_right">
+                                                    <a rel="noreferrer noopener noreferrer" target="_blank" href="https://forms.gle/QRHdZ6DG1sg1k4ZN6">
+                                                        <img class="slideshow_img" src="https://files.fullstack.edu.vn/f8-prod/banners/36/6454dee96205c.png" alt="F8 - Học lập trình web offline" title="Lớp Offline tại Hà Nội">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="slideshow_arrow slideshow_next">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="chevron-right" class="svg-inline--fa fa-chevron-right " role="img" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <!-- Icon Menu -->
+                            <ul class="slick-dots" style="display: block;">
+                                <li class="slick-active"><button>1</button></li>
+                                <li class="slick-active"><button>2</button></li>
+                                <li class="slick-active"><button>3</button></li>
+                                <li class="slick-active"><button>4</button></li>
+                                <li class="slick-active"><button>5</button></li>
+                                <li class="slick-active"><button>6</button></li>
+                                <li class="slick-active"><button>7</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phần Đăng video -->
+                <div class="home_wrapper">
+                    <div class="scrollList_vertical">
+                        <div>
+                            <div class="scrollList_heading-wrap">
+                                <h2 class="scrollList_heading">
+                                    <span rel="noreferrer" target="_self">
+                                        Khóa học Pro
+                                        <span class="scrollList_label">Mới</span>
+                                    </span>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="scrollList_body">
+                            <div class="index-module_row">
+                                @{
+                                    var random2 = new Random();
+                                    var samples2 = Model.OrderBy(x => random2.Next()).Take(4); // Lấy 4 mẫu ngẫu nhiên từ Model
+                                    var lap = 0;
+                                }
+                                @foreach (var item in samples2)
+                                {
+                                    <div class="index-module_col index-module_c-12 index-module_m-4 index-module_l-3">
+                                        <div class="commonItem_wrapper home_courseItem">
+                                            <form asp-controller="Home" asp-action="Content" method="get">
+                                                <button class="commonItem_link commonItem_has-link" title="@item.Name" target="_self" type="submit">
+
+                                                    <input type="hidden" name="id" value="@item.CourseId" /> <!-- Truyền CourseId vào query string -->
+                                                    <span type="submit" class="button_btn commonItem_cta-btn">
+                                                        Xem khóa học
+                                                    </span>
+
+                                                    <img src="~/images/@item.FileImage" sizes="cover" alt="Image" width="100%" height="100%" />
+                                                </button>
+                                            </form>
+                                            <form asp-controller="Home" asp-action="Content" method="post" id="myForm">
+                                                <input type="hidden" name="id" id="courseId" /> <!-- Input hidden để lưu giá trị cần gửi lên server -->
+                                                <!-- Thẻ a để kích hoạt sự kiện submit của form -->
+                                                <h3 class="commonItem_title">
+                                                    <a href="#" onclick="submitForm(@item.CourseId);">@item.Name</a>
+                                                </h3>
+                                            </form>
+                                            <div class="price">
+                                                <a class="link" type="submit">
+                                                    <span class="courseItem_old-price">@item.Price</span>
+                                                </a>
+                                                <a class="link" type="submit">
+                                                    <span class="courseItem_old-price">@item.CourseId</span>
+                                                </a>
+                                                <a class="link">
+                                                    <span class="courseItem_main-price">$@item.Discount</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    lap++;
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Phần video 2 -->
+                    <div class="scrollList_vertical">
+                        <div>
+                            <p class="scrollList_sub-heading"><strong>386.721+</strong> người khác đã học</p>
+                            <div class="scrollList_heading-wrap">
+                                <h2 class="scrollList_heading">
+                                    <a rel="noreferrer" target="_self" href="/learning-paths">
+                                        Khóa học miễn phí
+                                        <span class="scrollList_view-all-icon">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="currentColor" d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </h2>
+                                <a class="scrollList_view-all-icon" rel="noreferrer" target="_self" href="/learning-paths">
+                                    Xem lộ trình
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="scrollList_body">
+                            <div class="index-module_row">
+                                @{
+                                    var random1 = new Random();
+                                    var samples1 = Model.OrderBy(x => random1.Next()).Take(4); // Lấy 4 mẫu ngẫu nhiên từ Model
+                                    var lapf = 0;
+                                }
+                                @foreach (var item in samples1)
+                                {
+                                    <div class="index-module_col index-module_c-12 index-module_m-4 index-module_l-3">
+                                        <div class="commonItem_wrapper home_courseItem">
+                                            <form asp-controller="Home" asp-action="Content" method="get">
+                                                <button class="commonItem_link commonItem_has-link" title="Name" target="_self" type="submit">
+
+                                                    <input type="hidden" name="id" value="@item.CourseId" /> <!-- Truyền CourseId vào query string -->
+                                                    <span type="submit" class="button_btn commonItem_cta-btn">
+                                                        Xem khóa học
+                                                    </span>
+
+                                                    <img src="~/images/@item.FileImage" sizes="cover" alt="Image" width="100%" height="100%" />
+                                                </button>
+                                            </form>
+                                            <h3 class="commonItem_title">
+                                                <a target="_self" href="/landing/htmlcss/">@item.Name</a>
+                                            </h3>
+                                            <div class="price">
+                                                <a class="link" type="submit">
+                                                    <span class="courseItem_old-price">@item.Price</span>
+                                                </a>
+                                                <a class="link">
+                                                    <span class="courseItem_main-price">$@item.Discount</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    lapf++;
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollList_vertical">
+                        <div>
+                            <div class="scrollList_heading-wrap">
+                                <h2 class="scrollList_heading">
+                                    <a rel="noreferrer" target="_self" href="/blog">
+                                        Bài viết nổi bật
+                                        <span class="scrollList_view-all-icon">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="currentColor" d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </h2>
+                                <a class="scrollList_view-all" rel="noreferrer" target="_self" href="/blog">
+                                    Xem tất cả
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="scrollList_body">
+                            <section class="index-module_row">
+                                @{
+                                    var random = new Random();
+                                    var samples = Model.OrderBy(x => random.Next()).Take(4); // Lấy 4 mẫu ngẫu nhiên từ Model
+                                    var i = 0;
+                                }
+                                @foreach (var item in samples)
+                                {
+                                    <div class="index-module_col index-module_c-12 index-module_m-4 index-module_l-3">
+                                        <div class="commonItem_wrapper">
+                                            <a class="commonItem_link commonItem_has-link" title="Name" target="_self" href="/landing/htmlcss/">
+                                                <button type="submit" asp-controller="Home" asp-action="Content" class="button_btn commonItem_cta-btn">
+                                                    Xem khóa học
+                                                </button>
+                                                <img src="~/images/@item.FileImage" sizes="cover" alt="Image" width="100%" height="100%" />
+                                            </a>
+                                            <h3 class="commonItem_title">
+                                                <a target="_self" href="/blog/tong-hop-cac-san-pham-cua-hoc-vien-tai-f8.html">@item.Name</a>
+                                            </h3>
+                                            <div class="postItem_author">
+                                                <a class="postItem_avatar-wrapper" href="">
+                                                    <div class="fallbackAvatar_avatar fallbackAvatar_pro" style="--font-size: 2.9px;">
+                                                        <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/1/64f9a2fd4e064.jpg" alt="Sơn Đặng">
+                                                        <img class="fallbackAvatar_crown" src="./images/media/crown.8edf462029b3c37a7f673303d8d3bedc.svg" alt="crown">
+                                                    </div>
+                                                </a>
+                                                <a href="">
+                                                    <span class="postItem_user-name">@item.Teacher</span>
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-check" class="svg-inline--fa fa-circle-check userName_icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="font-size: 0.6rem;">
+                                                        <path fill="currentColor" d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="postItem_dot">·</span>
+                                                    <span>6 phút đọc</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    i++;
+                                }
+                            </section>
+                            <div class="scrollList_view-all-box">
+                                <div class="continueButton_wrapper">
+                                    <a class="continueButton_body" rel="noreferrer" target="_self"
+                                       href="/blog">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right"
+                                             class="svg-inline--fa fa-arrow-right " role="img" xmlns="http://www.w3.org/2000/svg"
+                                             viewBox="0 0 448 512">
+                                            <path fill="currentColor"
+                                                  d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scrollList_vertical">
+                        <div>
+                            <div class="scrollList_heading-wrap">
+                                <h2 class="scrollList_heading">
+                                    <a rel="noopener" target="_blank" href="https://www.youtube.com/c/F8VNOfficial/videos?view=0&amp;sort=p&amp;flow=grid">
+                                        Videos nổi bật
+                                        <span class="scrollList_view-all-icon">
+                                            <svg aria-hidden="true" focusable="false"
+                                                 data-prefix="fas" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right " role="img"
+                                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="currentColor"
+                                                      d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </h2>
+                                <a class="scrollList_view-all" rel="noopener" target="_blank" href="https://www.youtube.com/c/F8VNOfficial/videos?view=0&amp;sort=p&amp;flow=grid">
+                                    Xem tất cả
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                                         class="svg-inline--fa fa-chevron-right " role="img" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollList_body">
+                        <section class="index-module_row">
+                            <section class="index-module_col index-module_c-12 index-module_m-4 index-module_l-3">
+                                <div class="commonItem_wrapper">
+                                    <a class="commonItem_link commonItem_has-link" title="Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?" target="_blank"
+                                       href="https://youtu.be/YH-E4Y3EaT4" rel="noopener"
+                                       style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 50%);">
+                                        <button class="button_btn commonItem_cta-btn">Xem video</button>
+                                        <img class="commonItem_thumb" src="https://i.ytimg.com/vi/YH-E4Y3EaT4/maxresdefault.jpg"
+                                             alt="Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?">
+                                        <div class="videoItem_video-info">
+                                            <div class="videoItem_play-wrap">
+                                                <svg aria-hidden="true" focusable="false"
+                                                     data-prefix="fas" data-icon="play"
+                                                     class="svg-inline--fa fa-play videoItem_play-icon" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                    <path fill="currentColor"
+                                                          d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div class="videoItem_duration"><span>34:51</span></div>
+                                        </div>
+                                    </a>
+
+                                    <h3 class="commonItem_title">
+                                        <a target="_blank" href="https://youtu.be/YH-E4Y3EaT4" rel="noopener">Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?</a>
+                                    </h3>
+                                    <div class="videoItem_stats">
+                                        <div>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye"
+                                                 class="svg-inline--fa fa-eye " role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 576 512">
+                                                <path fill="currentColor"
+                                                      d="M279.6 160.4C282.4 160.1 285.2 160 288 160C341 160 384 202.1 384 256C384 309 341 352 288 352C234.1 352 192 309 192 256C192 253.2 192.1 250.4 192.4 247.6C201.7 252.1 212.5 256 224 256C259.3 256 288 227.3 288 192C288 180.5 284.1 169.7 279.6 160.4zM480.6 112.6C527.4 156 558.7 207.1 573.5 243.7C576.8 251.6 576.8 260.4 573.5 268.3C558.7 304 527.4 355.1 480.6 399.4C433.5 443.2 368.8 480 288 480C207.2 480 142.5 443.2 95.42 399.4C48.62 355.1 17.34 304 2.461 268.3C-.8205 260.4-.8205 251.6 2.461 243.7C17.34 207.1 48.62 156 95.42 112.6C142.5 68.84 207.2 32 288 32C368.8 32 433.5 68.84 480.6 112.6V112.6zM288 112C208.5 112 144 176.5 144 256C144 335.5 208.5 400 288 400C367.5 400 432 335.5 432 256C432 176.5 367.5 112 288 112z">
+                                                </path>
+                                            </svg>
+                                            <span>245.652</span>
+                                        </div>
+                                        <div>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-up"
+                                                 class="svg-inline--fa fa-thumbs-up " role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                      d="M128 447.1V223.1c0-17.67-14.33-31.1-32-31.1H32c-17.67 0-32 14.33-32 31.1v223.1c0 17.67 14.33 31.1 32 31.1h64C113.7 479.1 128 465.6 128 447.1zM512 224.1c0-26.5-21.48-47.98-48-47.98h-146.5c22.77-37.91 34.52-80.88 34.52-96.02C352 56.52 333.5 32 302.5 32c-63.13 0-26.36 76.15-108.2 141.6L178 186.6C166.2 196.1 160.2 210 160.1 224c-.0234 .0234 0 0 0 0L160 384c0 15.1 7.113 29.33 19.2 38.39l34.14 25.59C241 468.8 274.7 480 309.3 480H368c26.52 0 48-21.47 48-47.98c0-3.635-.4805-7.143-1.246-10.55C434 415.2 448 397.4 448 376c0-9.148-2.697-17.61-7.139-24.88C463.1 347 480 327.5 480 304.1c0-12.5-4.893-23.78-12.72-32.32C492.2 270.1 512 249.5 512 224.1z">
+                                                </path>
+                                            </svg>
+                                            <span>6.172</span>
+                                        </div>
+                                        <div>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment"
+                                                 class="svg-inline--fa fa-comment " role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                      d="M256 32C114.6 32 .0272 125.1 .0272 240c0 49.63 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734C1.979 478.2 4.75 480 8 480c66.25 0 115.1-31.76 140.6-51.39C181.2 440.9 217.6 448 256 448c141.4 0 255.1-93.13 255.1-208S397.4 32 256 32z">
+                                                </path>
+                                            </svg>
+                                            <span>230</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- 2 -->
+                            <section class="index-module_col index-module_c-12 index-module_m-4 index-module_l-3">
+                                <div class="commonItem_wrapper">
+                                    <a class="commonItem_link commonItem_has-link" title="Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?" target="_blank"
+                                       href="https://youtu.be/YH-E4Y3EaT4" rel="noopener"
+                                       style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 50%);">
+                                        <button class="button_btn commonItem_cta-btn">Xem video</button>
+                                        <img class="commonItem_thumb" src="https://i.ytimg.com/vi/YH-E4Y3EaT4/maxresdefault.jpg"
+                                             alt="Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?">
+                                        <div class="videoItem_video-info">
+                                            <div class="videoItem_play-wrap">
+                                                <svg aria-hidden="true" focusable="false"
+                                                     data-prefix="fas" data-icon="play"
+                                                     class="svg-inline--fa fa-play videoItem_play-icon" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                    <path fill="currentColor"
+                                                          d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div class="videoItem_duration"><span>34:51</span></div>
+                                        </div>
+                                    </a>
+
+                                    <h3 class="commonItem_title">
+                                        <a target="_blank" href="https://youtu.be/YH-E4Y3EaT4" rel="noopener">Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?</a>
+                                    </h3>
+                                    <div class="videoItem_stats">
+                                        <div>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye"
+                                                 class="svg-inline--fa fa-eye " role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 576 512">
+                                                <path fill="currentColor"
+                                                      d="M279.6 160.4C282.4 160.1 285.2 160 288 160C341 160 384 202.1 384 256C384 309 341 352 288 352C234.1 352 192 309 192 256C192 253.2 192.1 250.4 192.4 247.6C201.7 252.1 212.5 256 224 256C259.3 256 288 227.3 288 192C288 180.5 284.1 169.7 279.6 160.4zM480.6 112.6C527.4 156 558.7 207.1 573.5 243.7C576.8 251.6 576.8 260.4 573.5 268.3C558.7 304 527.4 355.1 480.6 399.4C433.5 443.2 368.8 480 288 480C207.2 480 142.5 443.2 95.42 399.4C48.62 355.1 17.34 304 2.461 268.3C-.8205 260.4-.8205 251.6 2.461 243.7C17.34 207.1 48.62 156 95.42 112.6C142.5 68.84 207.2 32 288 32C368.8 32 433.5 68.84 480.6 112.6V112.6zM288 112C208.5 112 144 176.5 144 256C144 335.5 208.5 400 288 400C367.5 400 432 335.5 432 256C432 176.5 367.5 112 288 112z">
+                                                </path>
+                                            </svg>
+                                            <span>245.652</span>
+                                        </div>
+                                        <div>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-up"
+                                                 class="svg-inline--fa fa-thumbs-up " role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                      d="M128 447.1V223.1c0-17.67-14.33-31.1-32-31.1H32c-17.67 0-32 14.33-32 31.1v223.1c0 17.67 14.33 31.1 32 31.1h64C113.7 479.1 128 465.6 128 447.1zM512 224.1c0-26.5-21.48-47.98-48-47.98h-146.5c22.77-37.91 34.52-80.88 34.52-96.02C352 56.52 333.5 32 302.5 32c-63.13 0-26.36 76.15-108.2 141.6L178 186.6C166.2 196.1 160.2 210 160.1 224c-.0234 .0234 0 0 0 0L160 384c0 15.1 7.113 29.33 19.2 38.39l34.14 25.59C241 468.8 274.7 480 309.3 480H368c26.52 0 48-21.47 48-47.98c0-3.635-.4805-7.143-1.246-10.55C434 415.2 448 397.4 448 376c0-9.148-2.697-17.61-7.139-24.88C463.1 347 480 327.5 480 304.1c0-12.5-4.893-23.78-12.72-32.32C492.2 270.1 512 249.5 512 224.1z">
+                                                </path>
+                                            </svg>
+                                            <span>6.172</span>
+                                        </div>
+                                        <div>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment"
+                                                 class="svg-inline--fa fa-comment " role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                      d="M256 32C114.6 32 .0272 125.1 .0272 240c0 49.63 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734C1.979 478.2 4.75 480 8 480c66.25 0 115.1-31.76 140.6-51.39C181.2 440.9 217.6 448 256 448c141.4 0 255.1-93.13 255.1-208S397.4 32 256 32z">
+                                                </path>
+                                            </svg>
+                                            <span>230</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- 3 -->
+                            <section class="index-module_col index-module_c-12 index-module_m-4 index-module_l-3">
+                                <div class="commonItem_wrapper">
+                                    <a class="commonItem_link commonItem_has-link" title="Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?" target="_blank"
+                                       href="https://youtu.be/YH-E4Y3EaT4" rel="noopener"
+                                       style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 50%);">
+                                        <button class="button_btn commonItem_cta-btn">Xem video</button>
+                                        <img class="commonItem_thumb" src="https://i.ytimg.com/vi/YH-E4Y3EaT4/maxresdefault.jpg"
+                                             alt="Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?">
+                                        <div class="videoItem_video-info">
+                                            <div class="videoItem_play-wrap">
+                                                <svg aria-hidden="true" focusable="false"
+                                                     data-prefix="fas" data-icon="play"
+                                                     class="svg-inline--fa fa-play videoItem_play-icon" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                    <path fill="currentColor"
+                                                          d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div class="videoItem_duration"><span>34:51</span></div>
+                                        </div>
+                                    </a>
+
+                                    <h3 class="commonItem_title">
+                                        <a target="_blank" href="https://youtu.be/YH-E4Y3EaT4" rel="noopener">Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?</a>
+                                    </h3>
+                                    <div class="videoItem_stats">
+                                        <div>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye"
+                                                 class="svg-inline--fa fa-eye " role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 576 512">
+                                                <path fill="currentColor"
+                                                      d="M279.6 160.4C282.4 160.1 285.2 160 288 160C341 160 384 202.1 384 256C384 309 341 352 288 352C234.1 352 192 309 192 256C192 253.2 192.1 250.4 192.4 247.6C201.7 252.1 212.5 256 224 256C259.3 256 288 227.3 288 192C288 180.5 284.1 169.7 279.6 160.4zM480.6 112.6C527.4 156 558.7 207.1 573.5 243.7C576.8 251.6 576.8 260.4 573.5 268.3C558.7 304 527.4 355.1 480.6 399.4C433.5 443.2 368.8 480 288 480C207.2 480 142.5 443.2 95.42 399.4C48.62 355.1 17.34 304 2.461 268.3C-.8205 260.4-.8205 251.6 2.461 243.7C17.34 207.1 48.62 156 95.42 112.6C142.5 68.84 207.2 32 288 32C368.8 32 433.5 68.84 480.6 112.6V112.6zM288 112C208.5 112 144 176.5 144 256C144 335.5 208.5 400 288 400C367.5 400 432 335.5 432 256C432 176.5 367.5 112 288 112z">
+                                                </path>
+                                            </svg>
+                                            <span>245.652</span>
+                                        </div>
+                                        <div>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-up"
+                                                 class="svg-inline--fa fa-thumbs-up " role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                      d="M128 447.1V223.1c0-17.67-14.33-31.1-32-31.1H32c-17.67 0-32 14.33-32 31.1v223.1c0 17.67 14.33 31.1 32 31.1h64C113.7 479.1 128 465.6 128 447.1zM512 224.1c0-26.5-21.48-47.98-48-47.98h-146.5c22.77-37.91 34.52-80.88 34.52-96.02C352 56.52 333.5 32 302.5 32c-63.13 0-26.36 76.15-108.2 141.6L178 186.6C166.2 196.1 160.2 210 160.1 224c-.0234 .0234 0 0 0 0L160 384c0 15.1 7.113 29.33 19.2 38.39l34.14 25.59C241 468.8 274.7 480 309.3 480H368c26.52 0 48-21.47 48-47.98c0-3.635-.4805-7.143-1.246-10.55C434 415.2 448 397.4 448 376c0-9.148-2.697-17.61-7.139-24.88C463.1 347 480 327.5 480 304.1c0-12.5-4.893-23.78-12.72-32.32C492.2 270.1 512 249.5 512 224.1z">
+                                                </path>
+                                            </svg>
+                                            <span>6.172</span>
+                                        </div>
+                                        <div>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment"
+                                                 class="svg-inline--fa fa-comment " role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                      d="M256 32C114.6 32 .0272 125.1 .0272 240c0 49.63 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734C1.979 478.2 4.75 480 8 480c66.25 0 115.1-31.76 140.6-51.39C181.2 440.9 217.6 448 256 448c141.4 0 255.1-93.13 255.1-208S397.4 32 256 32z">
+                                                </path>
+                                            </svg>
+                                            <span>230</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- 4 -->
+                            <section class="index-module_col index-module_c-12 index-module_m-4 index-module_l-3">
+                                <div class="commonItem_wrapper">
+                                    <a class="commonItem_link commonItem_has-link" title="Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?" target="_blank"
+                                       href="https://youtu.be/YH-E4Y3EaT4" rel="noopener"
+                                       style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 50%);">
+                                        <button class="button_btn commonItem_cta-btn">Xem video</button>
+                                        <img class="commonItem_thumb" src="https://i.ytimg.com/vi/YH-E4Y3EaT4/maxresdefault.jpg"
+                                             alt="Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?">
+                                        <div class="videoItem_video-info">
+                                            <div class="videoItem_play-wrap">
+                                                <svg aria-hidden="true" focusable="false"
+                                                     data-prefix="fas" data-icon="play"
+                                                     class="svg-inline--fa fa-play videoItem_play-icon" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                    <path fill="currentColor"
+                                                          d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div class="videoItem_duration"><span>34:51</span></div>
+                                        </div>
+                                    </a>
+
+                                    <h3 class="commonItem_title">
+                                        <a target="_blank" href="https://youtu.be/YH-E4Y3EaT4" rel="noopener">Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?</a>
+                                    </h3>
+                                    <div class="videoItem_stats">
+                                        <div>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye"
+                                                 class="svg-inline--fa fa-eye " role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 576 512">
+                                                <path fill="currentColor"
+                                                      d="M279.6 160.4C282.4 160.1 285.2 160 288 160C341 160 384 202.1 384 256C384 309 341 352 288 352C234.1 352 192 309 192 256C192 253.2 192.1 250.4 192.4 247.6C201.7 252.1 212.5 256 224 256C259.3 256 288 227.3 288 192C288 180.5 284.1 169.7 279.6 160.4zM480.6 112.6C527.4 156 558.7 207.1 573.5 243.7C576.8 251.6 576.8 260.4 573.5 268.3C558.7 304 527.4 355.1 480.6 399.4C433.5 443.2 368.8 480 288 480C207.2 480 142.5 443.2 95.42 399.4C48.62 355.1 17.34 304 2.461 268.3C-.8205 260.4-.8205 251.6 2.461 243.7C17.34 207.1 48.62 156 95.42 112.6C142.5 68.84 207.2 32 288 32C368.8 32 433.5 68.84 480.6 112.6V112.6zM288 112C208.5 112 144 176.5 144 256C144 335.5 208.5 400 288 400C367.5 400 432 335.5 432 256C432 176.5 367.5 112 288 112z">
+                                                </path>
+                                            </svg>
+                                            <span>245.652</span>
+                                        </div>
+                                        <div>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-up"
+                                                 class="svg-inline--fa fa-thumbs-up " role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                      d="M128 447.1V223.1c0-17.67-14.33-31.1-32-31.1H32c-17.67 0-32 14.33-32 31.1v223.1c0 17.67 14.33 31.1 32 31.1h64C113.7 479.1 128 465.6 128 447.1zM512 224.1c0-26.5-21.48-47.98-48-47.98h-146.5c22.77-37.91 34.52-80.88 34.52-96.02C352 56.52 333.5 32 302.5 32c-63.13 0-26.36 76.15-108.2 141.6L178 186.6C166.2 196.1 160.2 210 160.1 224c-.0234 .0234 0 0 0 0L160 384c0 15.1 7.113 29.33 19.2 38.39l34.14 25.59C241 468.8 274.7 480 309.3 480H368c26.52 0 48-21.47 48-47.98c0-3.635-.4805-7.143-1.246-10.55C434 415.2 448 397.4 448 376c0-9.148-2.697-17.61-7.139-24.88C463.1 347 480 327.5 480 304.1c0-12.5-4.893-23.78-12.72-32.32C492.2 270.1 512 249.5 512 224.1z">
+                                                </path>
+                                            </svg>
+                                            <span>6.172</span>
+                                        </div>
+                                        <div>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment"
+                                                 class="svg-inline--fa fa-comment " role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                      d="M256 32C114.6 32 .0272 125.1 .0272 240c0 49.63 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734C1.979 478.2 4.75 480 8 480c66.25 0 115.1-31.76 140.6-51.39C181.2 440.9 217.6 448 256 448c141.4 0 255.1-93.13 255.1-208S397.4 32 256 32z">
+                                                </path>
+                                            </svg>
+                                            <span>230</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        <div class="scrollList_view-all-box">
+                            <div class="continueButton_wrapper">
+                                <a class="continueButton_body" rel="noreferrer" target="_self"
+                                   href="/blog">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right"
+                                         class="svg-inline--fa fa-arrow-right " role="img" xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 448 512">
+                                        <path fill="currentColor"
+                                              d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="newFeed_wrapper">
+                    <button class="newFeed_button">
+                        <span class="newFeed_icon">
+                            <svg viewBox="0 0 24 24" style="width: 24px; height: 24px;">
+                                <path fill="currentColor" d="M12,8H4A2,2 0 0,0 2,10V14A2,2 0 0,0 4,16H5V20A1,1 0 0,0 6,21H8A1,1 0 0,0 9,20V16H12L17,20V4L12,8M15,15.6L13,14H4V10H13L15,8.4V15.6M21.5,12C21.5,13.71 20.54,15.26 19,16V8C20.53,8.75 21.5,10.3 21.5,12Z">
+                                </path>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer class="footer_wrapper">
+        <section class="index-module_grid index-module_wide">
+            <section class="index-module_row">
+                <section class="index-module_col index-module_c-12 index-module_m-12 index-module_l-3">
+                    <div class="footer_column">
+                        <div>
+                            <div class="footer_column-top">
+                                <a href="/">
+                                    <img class="footer_top-logo" src="./images/logo.png" alt="F8">
+                                </a>
+                                <h2 class="footer_top-slogan">Học Lập Trình Để Đi Làm</h2>
+                            </div>
+                            <p class="footer_contact-list">
+                                Điện thoại:
+                                <a href="tel:0246.329.1102">0246.329.1102</a>
+                                <br>Email: <a href="mailto:contact@fullstack.edu.vn">contact@fpt.edu.vn</a>
+                                <br>66 Võ Văn Tần Q. Thanh Khê, Đà Nẵng
+                            </p>
+                            <!-- <div>
+                                <a href="https://www.dmca.com/Protection/Status.aspx?id=1b325c69-aeb7-4e32-8784-a0009613323a&amp;refurl=https%3a%2f%2ffullstack.edu.vn%2f&amp;rlo=true" target="_blank" rel="noreferrer" title="DMCA Protected">
+                                    <img class="footer_dmca" src="/static/media/dmca.2593d9ecf1c982e3c3a2.png" alt="DMCA">
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </section>
+                <section class="index-module_col index-module_c-12 index-module_m-4 index-module_l-2">
+                    <div class="footer_column">
+                        <div>
+                            <h2 class="footer_heading">Về F8</h2>
+                            <ul class="footer_list">
+                                <li><a href="/about-us">Giới thiệu</a></li>
+                                <li><a href="/contact-us">Liên hệ</a></li>
+                                <li><a href="/terms">Điều khoản</a></li>
+                                <li><a href="/privacy">Bảo mật</a></li>
+                                <li><a href="/careers">Cơ hội việc làm</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="index-module_col index-module_c-12 index-module_m-4 index-module_l-2">
+                    <div class="footer_column">
+                        <div>
+                            <h2 class="footer_heading">Sản phẩm</h2>
+                            <ul class="footer_list">
+                                <li>
+                                    <a href="https://nester.fullstack.edu.vn" target="_blank" rel="noreferrer">Game Nester</a>
+                                </li>
+                                <li>
+                                    <a href="https://css-diner.fullstack.edu.vn" target="_blank" rel="noreferrer">Game CSS Diner</a>
+                                </li>
+                                <li>
+                                    <a href="https://css-selectors-cheatsheet.fullstack.edu.vn" target="_blank" rel="noreferrer">Game CSS Selectors</a>
+                                </li>
+                                <li>
+                                    <a href="https://froggy.fullstack.edu.vn" target="_blank" rel="noreferrer">Game Froggy</a>
+                                </li>
+                                <li>
+                                    <a href="https://froggy-pro.fullstack.edu.vn" target="_blank" rel="noreferrer">Game Froggy Pro</a>
+                                </li>
+                                <li>
+                                    <a href="https://css-scoops.fullstack.edu.vn" target="_blank" rel="noreferrer">Game Scoops</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="index-module_col index-module_c-12 index-module_m-4 index-module_l-2">
+                    <div class="footer_column">
+                        <div>
+                            <h2 class="footer_heading">Công cụ</h2>
+                            <ul class="footer_list">
+                                <li>
+                                    <a href="https://cv.fullstack.edu.vn/" target="_blank" rel="noreferrer">Tạo CV xin việc</a>
+                                </li>
+                                <li>
+                                    <a href="/shorten-urls">Rút gọn liên kết</a>
+                                </li>
+                                <li>
+                                    <a href="https://clippy.fullstack.edu.vn/" target="_blank" rel="noreferrer">Clip-path maker</a>
+                                </li>
+                                <li>
+                                    <a href="https://snippet-generator.fullstack.edu.vn/" target="_blank" rel="noreferrer">Snippet generator</a>
+                                </li>
+                                <li>
+                                    <a href="https://grid.fullstack.edu.vn/" target="_blank" rel="noreferrer">CSS Grid generator</a>
+                                </li>
+                                <li>
+                                    <a href="https://botayra.fullstack.edu.vn/" target="_blank" rel="noreferrer">Cảnh báo sờ tay lên mặt</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="index-module_col index-module_c-12 index-module_m-6 index-module_l-3">
+                    <div class="footer_column">
+                        <div>
+                            <h2 class="footer_heading">
+                                <a target="_blank" href="https://www.google.com/search?q=C%C3%94NG+TY+C%E1%BB%94+PH%E1%BA%A6N+C%C3%94NG+NGH%E1%BB%86+GI%C3%81O+D%E1%BB%A4C+F8" rel="noreferrer">CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC F8</a>
+                            </h2>
+                            <ul class="footer_list">
+                                <li>Mã số thuế: 0109922901</li>
+                                <li>Ngày thành lập: 04/03/2022</li>
+                                <li>Lĩnh vực: Công nghệ, giáo dục, lập trình. BTEC xây dựng và phát triển những sản phẩm mang lại giá trị cho cộng đồng.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="index-module_row">
+                <section class="index-module_col index-module_c-12 index-module_m-12 index-module_l-12">
+                    <div class="footer_bottom">
+                        <p class="footer_copyright">© 2018 - 2024 F8. Nền tảng học lập trình hàng đầu Việt Nam</p>
+                        <div class="footer_social-list">
+                            <a class="footer_social-item social-item-first footer_youtube" href="https://www.youtube.com/c/F8VNOfficial" title="F8 trên Youtube" target="_blank" rel="noreferrer">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube-square" class="svg-inline--fa fa-youtube-square " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path fill="currentColor" d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="footer_social-item footer_facebook" href="https://www.facebook.com/groups/f8official" title="F8 trên Facebook" target="_blank" rel="noreferrer">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab"
+                                     data-icon="facebook-square" class="svg-inline--fa fa-facebook-square " role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path fill="currentColor"
+                                          d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.3V327.7h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0 -48-48z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="footer_social-item footer_tiktok" href="" title="F8 trên Tiktok" target="_blank" rel="noreferrer">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab"
+                                     data-icon="tiktok" class="svg-inline--fa fa-tiktok " role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path fill="currentColor"
+                                          d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.25V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.2 121.2 0 0 0 1.86 22.17h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.14z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </footer>
+    <script>
+        function submitForm(courseId) {
+            // Gán giá trị courseId vào input hidden
+            document.getElementById('courseId').value = courseId;
+
+            // Submit form
+            document.getElementById('myForm').submit();
+        }
+    </script>
+</body>
+</html>
+

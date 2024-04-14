@@ -1,0 +1,97 @@
+﻿
+<header>
+    <div class="header-card">
+        <!-- Phần Logo -->
+        <div class="logo-card">
+            <a href="/">
+                <img src="~/images/logo.png" alt="F8">
+            </a>
+            <h4 class="navbar_logoheading">Học Lập Trình Để Đi Làm</h4>
+        </div>
+        <!-- Phần Tìm Kiếm  -->
+        <div class="sr-card">
+            <div>
+                <div class="search-input" aria-expanded="false">
+                    <div class="search-icon">
+                    </div>
+                    <input class="search-input_sr" spellcheck="false" placeholder="Tìm kiếm khóa học, bài viết, video, ..." value="">
+                </div>
+            </div>
+        </div>
+        <!-- Phần Nút Đăng Ký Đăng Nhập -->
+        <nav class="log-card">
+            <ul class="menu-nav">
+                <!-- Phần Nút Nạp Tiền -->
+                <div class="menu-up">
+                    <div class="button-up">
+                        <a href="/about-us" target="_top" style="text-decoration: none; color: unset; cursor: pointer;">
+                            <button class="up-card1">
+                                <span>
+                                    <span>Nạp tiền</span>
+                                </span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="button-up">
+                        <a href="/about-us" target="_top" style="text-decoration: none; color: unset; cursor: pointer;">
+                            <button class="up-card2">
+                                <span>
+                                    <span>Tải Lên</span>
+                                </span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    var userRole = Context.Session.GetString("UserRole");
+
+                    @if (userRole == "Admin")
+                    {
+                        <!-- Hiển thị button Admin Panel chỉ khi người dùng là Admin -->
+                        <li class="menu-log">
+                            <a href="/Admin/Index" class="button-card">Admin Panel</a>
+                        </li>
+                    }
+
+                    <!-- Hiển thị button Logout cho tất cả các người dùng đã đăng nhập -->
+                    <li class="menu-log">
+                        <form asp-controller="Authen" asp-action="Logout" method="post" class="logout-form">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-link">Logout</button>
+                        </form>
+                    </li>
+                }
+                else
+                {
+                    <!-- Hiển thị button Login và Register cho người dùng chưa đăng nhập -->
+                    <li class="menu-log">
+                        <label class="button-menu">
+                            <div class="log-card">
+                                <a href="~/Authen/Login" target="_self" class="button-card">Login</a>
+                            </div>
+                        </label>
+                    </li>
+                    <li class="menu-log">
+                        <label class="button-menu">
+                            <div class="log-card">
+                                <a href="~/Authen/Register" target="_self" class="button-card">Register</a>
+                            </div>
+                        </label>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+    function onClickNav(goto) {
+        let isLogged = false;
+        if (!isLogged) {
+            $("#modalLogin").modal("show");
+        } else {
+            window.location.href = goto;
+        }
+    }
+</script>
